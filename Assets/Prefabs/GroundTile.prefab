@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 3064250372259581601, guid: fa2b4f6563d5bcf4cb6d78e85556b5d2, type: 3}
+  cowprefab: {fileID: 8287000373256615691, guid: 3cc763fdc72104a4e9f4b55a0d16cbc6, type: 3}
 --- !u!1 &7658365792455250207
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class GroundTile : MonoBehaviour
     {
         spawnCow();
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
+        SpawnCows();
     }
     void OnTriggerExit(Collider other)
     {
@@ -30,5 +31,30 @@ public class GroundTile : MonoBehaviour
 
         Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
     }
+    public GameObject cowprefab;
 
+    void SpawnCows()
+    {
+        int cows = 15;
+        for (int i = 0; i < cows; i++)
+        {
+            GameObject temp = Instantiate(cowprefab, transform);
+            temp.transform.position = randomSpawnPoint(GetComponent<Collider>());
+        }
+    }
+    Vector3 randomSpawnPoint (Collider collider)
+    {
+        Vector3 point = new Vector3(
+            Random.Range(collider.bounds.min.x, collider.bounds.max.x),
+            Random.Range(collider.bounds.min.y, collider.bounds.max.y),
+            Random.Range(collider.bounds.min.z, collider.bounds.max.z)
+            );
+        if (point != collider.ClosestPoint(point))
+        {
+            point = randomSpawnPoint(collider);
+        }
+        point.y = 1;
+        return point;
+    }
+    
 }
