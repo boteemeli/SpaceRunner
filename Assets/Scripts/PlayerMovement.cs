@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     bool alive = true;
-    public float speed = 5;
+    private float speed = 5.0f;
+    private double idk = 0;
     public Rigidbody rb;
     float horizontalInput;
     public float horizontalMultiplier = 2;
@@ -19,7 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public void FixedUpdate()
     {
         if (!alive) return;
-        
+
+        IncreasingSpeed();
         Vector3 forwardmove = transform.forward * speed * Time.fixedDeltaTime;
         Vector3 horizontalMove = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMultiplier;
         rb.MovePosition(rb.position + forwardmove + horizontalMove);
@@ -38,5 +40,10 @@ public class PlayerMovement : MonoBehaviour
     {
         alive = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void IncreasingSpeed()
+    {
+        idk = idk + 0.01;
+        speed = (float)idk;
     }
 }
