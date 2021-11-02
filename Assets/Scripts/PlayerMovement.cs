@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     bool alive = true;
-    private float speed = 5.0f;
-    private double idk = 0;
+    private float speed = 4.0f;
+    private double idk = 4.0;
     public Rigidbody rb;
     float horizontalInput;
     public float horizontalMultiplier = 2;
