@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     float horizontalInput;
     public float horizontalMultiplier = 2;
+    public float upwardMultiplier = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,12 @@ public class PlayerMovement : MonoBehaviour
         IncreasingSpeed();
         Vector3 forwardmove = transform.forward * speed * Time.fixedDeltaTime;
         Vector3 horizontalMove = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMultiplier;
-        rb.MovePosition(rb.position + forwardmove + horizontalMove);
+        Vector3 up = transform.up * Time.fixedDeltaTime * speed * 0;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            up = transform.up * Time.fixedDeltaTime * speed * upwardMultiplier;
+        }
+        rb.MovePosition(rb.position + forwardmove + horizontalMove + up);
     }
 
     // Update is called once per frame
