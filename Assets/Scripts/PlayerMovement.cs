@@ -10,7 +10,10 @@ public class PlayerMovement : MonoBehaviour
     private double idk = 4.0;
     public Rigidbody rb;
     float horizontalInput;
-    public float horizontalMultiplier = 2;
+    float verticalInput;
+    float jumpSpeed = 10.0f;
+    public float horizontalMultiplier = 1;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,20 +21,27 @@ public class PlayerMovement : MonoBehaviour
         
     }
     public void FixedUpdate()
+
     {
+
         if (!alive) return;
 
         IncreasingSpeed();
         Vector3 forwardmove = transform.forward * speed * Time.fixedDeltaTime;
         Vector3 horizontalMove = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMultiplier;
+        Vector3 verticalMove = transform.up * verticalInput * jumpSpeed * Time.fixedDeltaTime;
+
         rb.MovePosition(rb.position + forwardmove + horizontalMove);
+        rb.MovePosition(rb.position + verticalMove);
+
     }
 
     // Update is called once per frame
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        if (transform.position.y < -5)
+        verticalInput = Input.GetAxis("Vertical");
+        if (transform.position.y < -2)
         {
             Die();
         }
