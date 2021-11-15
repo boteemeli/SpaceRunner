@@ -35,7 +35,7 @@ public class GroundTile : MonoBehaviour
 
     void SpawnCows()
     {
-        int cows = 15;
+        int cows = 6;
         for (int i = 0; i < cows; i++)
         {
             GameObject temp = Instantiate(cowprefab, transform);

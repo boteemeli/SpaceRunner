@@ -771,6 +771,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!122 &1892816691
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892816687}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278464537
+  m_Size: 2.37
 --- !u!4 &1892816693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: be193758dfe3e0242b64302c176207c3, type: 3}

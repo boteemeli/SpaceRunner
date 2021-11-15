@@ -29,5 +29,6 @@ public class TheCow : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, 0, speed * Time.deltaTime);
+
     }
 }
