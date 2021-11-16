@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 3064250372259581601, guid: fa2b4f6563d5bcf4cb6d78e85556b5d2, type: 3}
-  cowprefab: {fileID: 8806876443830985037, guid: 3cc763fdc72104a4e9f4b55a0d16cbc6, type: 3}
+  cowprefab: {fileID: 919132149155446097, guid: 5d44808d78c82b5428e2df6171d6095d, type: 3}
 --- !u!122 &5526428257206674203
 Halo:
   m_ObjectHideFlags: 0

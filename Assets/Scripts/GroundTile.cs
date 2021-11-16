@@ -7,6 +7,8 @@ public class GroundTile : MonoBehaviour
     GroundSpawner groundSpawner;
     public GameObject obstaclePrefab;
 
+    private Vector3 scaleChange;
+
 
     void Start()
     {
@@ -40,6 +42,8 @@ public class GroundTile : MonoBehaviour
         {
             GameObject temp = Instantiate(cowprefab, transform);
             temp.transform.position = randomSpawnPoint(GetComponent<Collider>());
+            temp.transform.Rotate(0, 180, 0, Space.World);
+            temp.transform.localScale -= temp.transform.localScale / 2;
         }
     }
     Vector3 randomSpawnPoint (Collider collider)
