@@ -9,13 +9,17 @@ public class GroundTile : MonoBehaviour
 
     private Vector3 scaleChange;
 
+    public GameObject[] spawns;
 
     void Start()
     {
         spawnCow();
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
         SpawnCows();
+        
     }
+
+    
     void OnTriggerExit(Collider other)
     {
         groundSpawner.SpawnTile();
@@ -33,18 +37,35 @@ public class GroundTile : MonoBehaviour
 
         Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
     }
+
+    public void RotateCow()
+    {
+        spawns = GameObject.FindGameObjectsWithTag("Cow");
+        for (int i = 0; i < spawns.Length; i++)
+        {
+
+            spawns[i].transform.Rotate(0, Random.Range(0, 180), 0, Space.World);
+        }
+    }
     public GameObject cowprefab;
 
     void SpawnCows()
     {
-        int cows = 6;
+        int cows = 1;
         for (int i = 0; i < cows; i++)
         {
             GameObject temp = Instantiate(cowprefab, transform);
             temp.transform.position = randomSpawnPoint(GetComponent<Collider>());
-            temp.transform.Rotate(0, 180, 0, Space.World);
-            temp.transform.localScale -= temp.transform.localScale / 2;
+            //temp.transform.Rotate(0, 180, 0, Space.World);
+            //temp.transform.localScale -= temp.transform.localScale / 2;
+            temp.tag = "Cow";
+            temp.transform.Rotate(0, Random.Range(0, 180), 0, Space.World);
+            temp.AddComponent<TheCow>();
+            temp.AddComponent<BoxCollider>();
+            temp.GetComponent<BoxCollider>().isTrigger = true;
+
         }
+        //RotateCow();
     }
     Vector3 randomSpawnPoint (Collider collider)
     {
@@ -57,7 +78,7 @@ public class GroundTile : MonoBehaviour
         {
             point = randomSpawnPoint(collider);
         }
-        point.y = 1;
+        point.y = 0;
         return point;
     }
     
