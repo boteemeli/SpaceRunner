@@ -11,13 +11,14 @@ public class DisplayText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        obj_text.text = PlayerPrefs.GetString("user_name");
+        Debug.Log("Tee DisplayText Scripti inputtia varten");
+        //obj_text.text = PlayerPrefs.GetString("user_name");
     }
 
     public void Create()
     {
         obj_text.text = display.text;
-        PlayerPrefts.SetString("user_name", obj_text.text);
-        PlayerPrefs.Save();
+        //PlayerPrefs.SetString("user_name", obj_text.text);
+        //PlayerPrefs.Save();
     }
 }
