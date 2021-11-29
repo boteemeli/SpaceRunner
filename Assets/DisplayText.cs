@@ -5,20 +5,21 @@ using UnityEngine.UI;
 
 public class DisplayText : MonoBehaviour
 {
-    public Text obj_text;
-    public InputField display;
+    public string theName;
+    public GameObject inputField;
+    public GameObject textDisplay;
 
-    // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        Debug.Log("Tee DisplayText Scripti inputtia varten");
-        //obj_text.text = PlayerPrefs.GetString("user_name");
+        if (Input.GetKeyUp(KeyCode.Return)) { StoreName(); }
     }
 
-    public void Create()
+    public void StoreName()
     {
-        obj_text.text = display.text;
-        //PlayerPrefs.SetString("user_name", obj_text.text);
+        theName = inputField.GetComponent<Text>().text;
+        //PlayerPrefs.SetString("user_name", textDisplay.GetComponent<Text>().text);
         //PlayerPrefs.Save();
+        //textDisplay.GetComponent<Text>().text = "Welcome " + PlayerPrefs.GetString("user_name") + " to the game.";
+        
     }
 }
