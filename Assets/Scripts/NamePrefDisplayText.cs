@@ -9,7 +9,7 @@ public class NamePrefDisplayText : MonoBehaviour
     public GameObject inputField;
     public GameObject textDisplay;
 
-    // Start is called before the first frame update
+    
     public void Start()
     {
         PlayerPrefs.SetString("user_name", theName);

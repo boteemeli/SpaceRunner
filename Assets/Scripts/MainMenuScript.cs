@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+    //Please note that NamePrefDisplayText includes playerpref saving for the name of the player !
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

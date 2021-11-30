@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     float verticalInput;
     float jumpSpeed = 10.0f;
     public float horizontalMultiplier = 1;
+    public GameObject ScoreAmount;
+    public int ToSaveTheScore;
 
 
     // Start is called before the first frame update
@@ -50,6 +52,11 @@ public class PlayerMovement : MonoBehaviour
     {
         alive = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    public void ScoreSaving()
+    {
+        PlayerPrefs.SetInt("score", ToSaveTheScore);
+        PlayerPrefs.Save();
     }
     public void IncreasingSpeed()
     {

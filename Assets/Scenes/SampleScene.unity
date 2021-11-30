@@ -1484,6 +1484,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1892816690}
   horizontalMultiplier: 2
+  ScoreAmount: {fileID: 466008814}
+  ToSaveTheScore: 0
 --- !u!136 &1892816689
 CapsuleCollider:
   m_ObjectHideFlags: 0
