@@ -17,7 +17,7 @@ public class NamePrefDisplayText : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Return))
         {
             Debug.Log("INPUT WORKS");
             StoreName();
@@ -28,7 +28,7 @@ public class NamePrefDisplayText : MonoBehaviour
     {
         theName = inputField.GetComponent<Text>().text;
         PlayerPrefs.SetString("user_name", theName);
-        textDisplay.GetComponent<Text>().text = @"Welcome " + theName + " to the game.";
+        textDisplay.GetComponent<Text>().text = @"Welcome " + PlayerPrefs.GetString("user_name") + " to the game.";
         PlayerPrefs.Save();
     }
 }
