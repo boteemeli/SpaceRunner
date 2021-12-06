@@ -306,3 +306,4 @@ Received Import Request.
 Start importing Assets/AllSkyFree/_AllSkyFree_Documentation.pdf using Guid(f6f10bad0f589486893b6f1b8f9fdeb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92f6141a6c5a0cb4f3b3991a5d37e473') in 0.008083 seconds
   Import took 0.010291 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
