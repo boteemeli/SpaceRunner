@@ -35,7 +35,8 @@ public class GroundTile : MonoBehaviour
         int cowSpawnIndex = Random.Range(2, 5);
         Transform spawnPoint = transform.GetChild(cowSpawnIndex).transform;
 
-        Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
+        GameObject temp = Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
+        temp.transform.Rotate(0, Random.Range(0, 180), 0, Space.World);
     }
 
     public void RotateCow()
@@ -63,7 +64,6 @@ public class GroundTile : MonoBehaviour
             temp.AddComponent<TheCow>();
             temp.AddComponent<BoxCollider>();
             temp.GetComponent<BoxCollider>().isTrigger = true;
-
         }
         //RotateCow();
     }
