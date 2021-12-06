@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     public void Die()
     {
         alive = false;
+        ScoreSaving();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void ScoreSaving()
