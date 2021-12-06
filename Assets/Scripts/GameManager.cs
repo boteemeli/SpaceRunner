@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
         score++;
         scoreText.text = $"Score: {score}";
         PlayerPrefs.SetInt("score", score);
-        ScoreManager.Instance.score = PlayerPrefs.GetInt("score");
+        score = PlayerPrefs.GetInt("score");
         
 
     }

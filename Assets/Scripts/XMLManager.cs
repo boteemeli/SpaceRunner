@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using System.Xml.Serialization;
 using System.IO;
 
+[System.Serializable]
 public class XMLManager : MonoBehaviour
 {
     public static XMLManager instance;
