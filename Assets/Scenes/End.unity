@@ -550,7 +550,6 @@ GameObject:
   m_Component:
   - component: {fileID: 242742511}
   - component: {fileID: 242742513}
-  - component: {fileID: 242742514}
   - component: {fileID: 242742512}
   m_Layer: 5
   m_Name: Text_Leaderboard
@@ -620,44 +619,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242742510}
   m_CullTransparentMesh: 1
---- !u!114 &242742514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242742510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7da4a50adfd1c9439afde7e87166756, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1: 
-  score: 
-  player1D: {fileID: 1627435783}
-  player1Ds: {fileID: 0}
-  player2D: {fileID: 0}
-  player2Ds: {fileID: 0}
-  player3D: {fileID: 0}
-  player3Ds: {fileID: 0}
-  player4D: {fileID: 0}
-  player4Ds: {fileID: 0}
-  player5D: {fileID: 0}
-  player5Ds: {fileID: 0}
-  player6D: {fileID: 0}
-  player6Ds: {fileID: 0}
-  player7D: {fileID: 0}
-  player7Ds: {fileID: 0}
-  player8D: {fileID: 0}
-  player8Ds: {fileID: 0}
-  player9D: {fileID: 0}
-  player9Ds: {fileID: 0}
-  player10D: {fileID: 0}
-  player10Ds: {fileID: 0}
-  readFiletext: 
-  list: []
-  highScoreDisplayArray: []
-  leaderboard: {fileID: 0}
 --- !u!1 &294138307
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +808,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LEADERBOARD
+  m_Text: PLAYER NAME
 --- !u!222 &475760778
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1241,31 +1202,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: 
-  score: 
   player1D: {fileID: 1627435783}
-  player1Ds: {fileID: 0}
-  player2D: {fileID: 0}
-  player2Ds: {fileID: 0}
-  player3D: {fileID: 0}
-  player3Ds: {fileID: 0}
-  player4D: {fileID: 0}
-  player4Ds: {fileID: 0}
-  player5D: {fileID: 0}
-  player5Ds: {fileID: 0}
-  player6D: {fileID: 0}
-  player6Ds: {fileID: 0}
-  player7D: {fileID: 0}
-  player7Ds: {fileID: 0}
-  player8D: {fileID: 0}
-  player8Ds: {fileID: 0}
-  player9D: {fileID: 0}
-  player9Ds: {fileID: 0}
-  player10D: {fileID: 0}
-  player10Ds: {fileID: 0}
   readFiletext: 
   list: []
   highScoreDisplayArray: []
-  leaderboard: {fileID: 0}
+  leaderboard: {fileID: 1627435787}
 --- !u!1 &1723383652
 GameObject:
   m_ObjectHideFlags: 0

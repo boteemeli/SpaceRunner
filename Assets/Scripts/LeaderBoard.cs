@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
-using System.Xml.Serialization;
+//using System.Xml.Serialization;
 
 [System.Serializable]
 public class LeaderBoard : MonoBehaviour
@@ -15,14 +15,15 @@ public class LeaderBoard : MonoBehaviour
 
     public List<HighScoreEntry> list = new List<HighScoreEntry>();
     public HighScoreDisplay[] highScoreDisplayArray;
-    public LeaderBoard leaderboard;
+    //public LeaderBoard leaderboard;
 
-    public static LeaderBoard instance;
-
+    //public static LeaderBoard instance;
+    /*
     void Awake()
     {
         instance = this;
     }
+    */
 
     // Int score
     // Start is called before the first frame update
