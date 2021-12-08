@@ -15,7 +15,7 @@ public class NameAndScore : MonoBehaviour
     {
         theName = PlayerPrefs.GetString("user_name");
         theNamed.GetComponent<Text>().text = theName;
-        theScore = PlayerPrefs.GetInt("score").ToString();
+        theScore = PlayerPrefs.GetInt("scores").ToString();
         theScored.GetComponent<Text>().text = theScore;
     }
 

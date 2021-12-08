@@ -17,10 +17,13 @@ public class PlayerMovement : MonoBehaviour
     public int ToSaveTheScore;
 
 
+    public string TheScoredis;
+    public GameObject TheScoredisp2;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerPrefs.GetString("scores");
     }
     public void FixedUpdate()
 
@@ -50,6 +53,9 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Die()
     {
+        //TheScoredis = TheScoredisp2.GetComponent<Text>();
+        PlayerPrefs.SetString("scores", TheScoredis);
+        PlayerPrefs.Save();
         alive = false;
         ScoreSaving();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
