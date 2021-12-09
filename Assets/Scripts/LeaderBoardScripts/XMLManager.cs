@@ -11,6 +11,9 @@ public class XMLManager : MonoBehaviour
     public static XMLManager instance;
     public LeaderBoard leaderboard;
 
+    //C:\Users\your_user\AppData\LocalLow\DefaultCompany\cowrunner\HighScores
+    //C:\Users\sjoho\AppData\LocalLow\DefaultCompany\cowrunner\HighScores
+
     void Awake()
     {
         instance = this;
