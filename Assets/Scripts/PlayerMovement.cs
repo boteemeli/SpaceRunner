@@ -7,12 +7,13 @@ public class PlayerMovement : MonoBehaviour
 {
     bool alive = true;
     private float speed = 4.0f;
+    private float verticanMoveSpeed = 10.0f;
     private double idk = 4.0;
     public Rigidbody rb;
     float horizontalInput;
     float verticalInput;
     float jumpSpeed = 10.0f;
-    public float horizontalMultiplier = 1;
+    //public float horizontalMultiplier = 1;
     public GameObject ScoreAmount;
     public int ToSaveTheScore;
 
@@ -33,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
         IncreasingSpeed();
         Vector3 forwardmove = transform.forward * speed * Time.fixedDeltaTime;
-        Vector3 horizontalMove = transform.right * horizontalInput * speed * Time.fixedDeltaTime * horizontalMultiplier;
+        Vector3 horizontalMove = transform.right * horizontalInput * verticanMoveSpeed * Time.fixedDeltaTime; // * horizontalMultiplie
         Vector3 verticalMove = transform.up * verticalInput * jumpSpeed * Time.fixedDeltaTime;
 
         rb.MovePosition(rb.position + forwardmove + horizontalMove);
@@ -62,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void ScoreSaving()
     {
-        PlayerPrefs.SetInt("score", ToSaveTheScore);
+        PlayerPrefs.SetInt("Cows Harvested ", ToSaveTheScore);
         PlayerPrefs.Save();
     }
     public void IncreasingSpeed()

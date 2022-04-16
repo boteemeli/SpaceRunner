@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cow : MonoBehaviour
+public class RockCollide : MonoBehaviour
 {
     PlayerMovement playerMovement;
     // Start is called before the first frame update

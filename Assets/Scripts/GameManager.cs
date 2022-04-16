@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public void ScoreOutPut()
     {
         score++;
-        scoreText.text = $"Score: {score}";
+        scoreText.text = $"Cows Harvested {score}";
         PlayerPrefs.SetInt("score", score);
         score = PlayerPrefs.GetInt("score");
         

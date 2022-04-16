@@ -15,8 +15,7 @@ public class GroundTile : MonoBehaviour
     {
         spawnCow();
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
-        SpawnCows();
-        
+        SpawnCows(); 
     }
 
     
@@ -28,7 +27,7 @@ public class GroundTile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //RotateCow();  
     }
     void spawnCow()
     {
@@ -52,7 +51,7 @@ public class GroundTile : MonoBehaviour
 
     void SpawnCows()
     {
-        int cows = 1;
+        int cows = 5;
         for (int i = 0; i < cows; i++)
         {
             GameObject temp = Instantiate(cowprefab, transform);
@@ -60,12 +59,11 @@ public class GroundTile : MonoBehaviour
             //temp.transform.Rotate(0, 180, 0, Space.World);
             //temp.transform.localScale -= temp.transform.localScale / 2;
             temp.tag = "Cow";
-            temp.transform.Rotate(0, Random.Range(0, 180), 0, Space.World);
-            temp.AddComponent<TheCow>();
+            //temp.transform.Rotate(0, Random.Range(0, 180), 0, Space.World);
+            temp.AddComponent<CowCollide>();
             temp.AddComponent<BoxCollider>();
             temp.GetComponent<BoxCollider>().isTrigger = true;
         }
-        //RotateCow();
     }
     Vector3 randomSpawnPoint (Collider collider)
     {

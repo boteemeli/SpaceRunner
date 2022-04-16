@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TheCow : MonoBehaviour
+public class CowCollide : MonoBehaviour
 {
-    float speed = 50f;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Cow>() != null)
+        if (other.gameObject.GetComponent<RockCollide>() != null)
         {
             Destroy(gameObject);
             return;
@@ -16,6 +15,7 @@ public class TheCow : MonoBehaviour
         {
             return;
         }
+        Debug.Log("accessing TheCow-file");
         GameManager.inst.ScoreOutPut();
         Destroy(gameObject);
     }
